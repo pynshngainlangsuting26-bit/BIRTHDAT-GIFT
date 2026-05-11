@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday ❤️</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to bottom, #000000, #1a1a1a, #ff7eb3);
+      overflow-x: hidden;
+      color: white;
+      text-align: center;
+    }
+
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+      animation: fadeIn 2s ease;
+    }
+
+    p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      line-height: 1.6;
+      animation: fadeIn 3s ease;
+    }
+
+    .btn {
+      margin-top: 25px;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 30px;
+      background: white;
+      color: #ff4f81;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+    }
+
+    .gallery {
+      padding: 60px 20px;
+    }
+
+    .gallery h2 {
+      margin-bottom: 25px;
+      font-size: 2rem;
+    }
+
+    .photos {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .photos img {
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: 0.3s;
+    }
+
+    .photos img:hover {
+      transform: scale(1.05);
+    }
+
+    .message {
+      padding: 60px 20px;
+    }
+
+    .message h2 {
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+
+    .footer {
+      padding: 30px;
+      font-size: 1rem;
+      opacity: 0.8;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .heart {
+      position: fixed;
+      top: -10px;
+      color: white;
+      animation: fall linear forwards;
+      opacity: 0.8;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(110vh);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <h1>Happy Birthday, Pynz ❤️</h1>
+    <p>
+      Today is all about you, Pynz. Thank you for making my days brighter, my smile bigger, and my life more beautiful just by being in it.
+    </p>
+
+    <button class="btn" onclick="showMessage()">Click Me 🎁</button>
+  </section>
+
+  <section class="gallery">
+    <h2>Our Memories 📸</h2>
+
+    <div class="photos">
+      <img src="photo1.jpg" alt="photo1">
+      <img src="photo2.jpg" alt="photo2">
+      <img src="photo3.jpg" alt="photo3">
+    </div>
+  </section>
+
+  <section class="message">
+    <h2>A Small Message For You 💌</h2>
+
+    <p>
+      No matter where life takes us, I hope you always keep smiling the way you do now. You deserve all the happiness, peace, and love in the world. Meeting you was one of the best things that ever happened to me. Thank you for being you, Pynz ❤️
+    
+    </p>
+  </section>
+
+  <div class="footer">
+    Made by Pyns with ❤️ for Pynz
+  </div>
+
+  <audio autoplay loop>
+    <source src="music.mp3" type="audio/mp3">
+  </audio>
+
+  <script>
+    function showMessage() {
+      alert("Pynz, you make my world brighter every single day ❤️");
+    }
+
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.innerHTML = '❤';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.fontSize = Math.random() * 20 + 15 + 'px';
+      heart.style.animationDuration = Math.random() * 3 + 2 + 's';
+
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 5000);
+    }
+
+    setInterval(createHeart, 300);
+  </script>
+
+</body>
+</html>
